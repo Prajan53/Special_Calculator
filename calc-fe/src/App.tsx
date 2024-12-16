@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./screens/home";
+import '@mantine/core/styles.css';
+import Home from "@/screens/home";
 import { MantineProvider } from "@mantine/core";
-import "./index.css";
+import "@/index.css";
 
 
 const paths = [

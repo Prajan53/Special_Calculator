@@ -104,7 +104,7 @@ export default function Home(){
 
     return(
         <>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="relative z-10 grid grid-cols-3 gap-2">
                 <Button
                     onClick={() => {setReset(true)}}
                     className="z-20 bg-black text-white"
@@ -114,12 +114,8 @@ export default function Home(){
                     Reset
                 </Button>
                 <Group className="z-20">
-                    {SWATCHES.map((swatchColor: string) => (
-                        <ColorSwatch
-                            key={swatchColor}
-                            color={swatchColor}
-                            onClick={() => setColor(swatchColor)}
-                        />
+                    {SWATCHES.map((swatch) => (
+                        <ColorSwatch key={swatch} color={swatch} onClick={() => setColor(swatch)} />
                     ))}
                 </Group>
                 <Button
