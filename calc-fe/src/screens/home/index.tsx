@@ -48,7 +48,8 @@ export default function Home(){
         const canvas = canvasRef.current;
         if(canvas){
             const response = await axios({
-                url: `${import.meta.env.VITE_API_URL}/claculate`,
+                method: 'post',
+                url: `${import.meta.env.VITE_API_URL}/calculate`,
                 data: {
                     image: canvas.toDataURL('image/png'),
                     dict_of_vars: dictOfVars,
